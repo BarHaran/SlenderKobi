@@ -24,7 +24,7 @@ public class Teleporter : MonoBehaviour {
             if (Time.time > nextTeleport)   // only teleport if enough time has passed
             {
                 transform.LookAt(player);
-                transform.position = new Vector3(Random.Range(transform.position.x, player.position.x), Random.Range(transform.position.y, player.position.y), Random.Range(transform.position.z, player.position.z));   // teleport
+                transform.position = new Vector3(Random.Range(transform.position.x, player.position.x),transform.position.y, Random.Range(transform.position.z, player.position.z));   // teleport
                 nextTeleport += spawnRate;    // update the next time to teleport
             }
         }
