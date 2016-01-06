@@ -25,7 +25,7 @@ public class Teleporter : MonoBehaviour {
             {
                 transform.LookAt(player);
                 transform.position = new Vector3(Random.Range(transform.position.x, player.position.x),player.position.y+1, Random.Range(transform.position.z, player.position.z));   // teleport
-                nextTeleport += spawnRate;    // update the next time to teleport
+                nextTeleport += spawnRate;
             }
         }
         if (Vector3.Distance(transform.position, player.position) <= distanceToPlayer)
@@ -36,6 +36,7 @@ public class Teleporter : MonoBehaviour {
         {
             nearPlayer = false;
         }
-        nextTeleport -= 0.01f * Time.deltaTime;
+        spawnRate -= 0.01f * Time.deltaTime;
+        
     }
 }
