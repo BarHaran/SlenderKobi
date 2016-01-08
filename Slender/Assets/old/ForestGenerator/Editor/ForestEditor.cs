@@ -306,7 +306,6 @@ public class ForestEditor : EditorWindow
                 Map tempMap = ((GameObject)Instantiate(mapPrefab.gameObject)).GetComponent<Map>();
                 tempMap.transform.position = new Vector3(0, 0, 0);
                 // max size which tree can growth
-                Forest.treeSize = prefabs[0].GetComponent<Renderer>().bounds.size.y;
                 if (texture == null)
                 {
                     f = new ForestManager().createForest(tempMap, species);
@@ -342,7 +341,6 @@ public class ForestEditor : EditorWindow
                             break;
                         }
                     }
-                    Forest.treeSize = prefabs[0].GetComponent<Renderer>().bounds.size.y;
 
                     if (texture == null)
                     {
